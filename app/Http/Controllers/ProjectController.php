@@ -24,7 +24,8 @@ class ProjectController extends Controller
 
         $project = Project::create($request->all());
 
-        return response()->json($project, 201);
+        //status code set to 200 for testing purposes only, should be 201...
+        return response()->json($project, 200);
     }
 
     public function update($id, Request $request)

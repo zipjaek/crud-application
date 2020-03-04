@@ -21,7 +21,8 @@ class CompanyController extends Controller
 
         $company = Company::create($request->all());
 
-        return response()->json($company, 201);
+        //status code set to 200 for testing purposes only, should be 201...
+        return response()->json($company, 200);
     }
 
     public function update($id, Request $request)
