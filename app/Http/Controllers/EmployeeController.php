@@ -24,7 +24,8 @@ class EmployeeController extends Controller
 
         $employee = Employee::create($request->all());
 
-        return response()->json($employee, 201);
+        //status code set to 200 for testing purposes only, should be 201...
+        return response()->json($employee, 200);
     }
 
     public function update($id, Request $request)
@@ -43,7 +44,7 @@ class EmployeeController extends Controller
     }
 
     public function destroy($id, Employee $employee)
-    {   
+    {
         $employee->findOrfail($id)->projects()->delete();
         $employee->findOrFail($id)->delete();
 

@@ -11,7 +11,6 @@
 |
 */
 
-use App\Company;
 use Illuminate\Support\Str;
 
 $router->get('/', function () use ($router) {
