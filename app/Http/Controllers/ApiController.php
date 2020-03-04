@@ -18,14 +18,14 @@ class ApiController extends Controller
     {
         $response = $this->client->request('GET', 'photos');
     
-        return json_decode($response->getBody()->getContents() );
+        return json_decode($response->getBody() );
     }
 
     public function todos()
     {
         $response = $this->client->request('GET', 'todos');
     
-        return json_decode($response->getBody()->getContents() );
+        return json_decode($response->getBody() );
     }
 }
 
